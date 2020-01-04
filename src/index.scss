@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+body {
+  margin: 0;
+}
+
+@import "./styles/form/form.scss";
+@import "./styles/input/input.scss";
+@import "./styles/filter/filter.scss";

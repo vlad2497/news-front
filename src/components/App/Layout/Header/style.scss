@@ -1,0 +1,46 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #042a3f;
+  padding: 25px;
+  background-color: #e1f1ff;
+
+  &__img {
+    width: 80px;
+    height: 60px;
+  }
+
+  &__button-logout {
+    font-size: 16px;
+    font-weight: bold;
+    height: 18px;
+    color: #ed4455;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+
+  &__link {
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #042a3f;
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-family: "Nunito", sans-serif;
+      font-size: 18px;
+    }
+  }
+}

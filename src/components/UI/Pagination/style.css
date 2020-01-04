@@ -1,0 +1,14 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination__arrow {
+  font-size: 45px;
+  color: #8af;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.pagination__arrow:hover {
+  cursor: pointer;
+  color: #40e1d1;
+}

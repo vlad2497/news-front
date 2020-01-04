@@ -1,0 +1,25 @@
+.input-wrapper {
+  padding: 20px;
+  position: relative;
+  width: 350px;
+}
+.input-wrapper__label {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  top: 0px;
+}
+.input-wrapper__input {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  border-width: 0 0 1px 0;
+  border-color: #40e1d1;
+  padding: 10px 0;
+  width: 100%;
+}
+.input-wrapper__error {
+  font-family: "Nunito", sans-serif;
+  color: brown;
+  font-size: 14px;
+}
