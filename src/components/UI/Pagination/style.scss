@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__arrow {
+    font-size: 45px;
+    color: #8af;
+    font-weight: bold;
+    padding-bottom: 15px;
+  }
+
+  &__arrow:hover {
+    cursor: pointer;
+    color: #40e1d1;
+  }
+}

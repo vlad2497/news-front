@@ -1,0 +1,13 @@
+.news-block {
+  width: 20%;
+  padding: 15px;
+  border: 1px solid #40e1d1;
+  margin: 20px 0;
+}
+.news-block__title {
+  color: #e1f1ff;
+}
+.news-block__img {
+  max-width: 100%;
+  max-height: 300px;
+}
