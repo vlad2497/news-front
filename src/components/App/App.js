@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Admin from "./../Pages/Admin";
 import Login from "./../../components/Auth/Login";
 import "./App.scss";
@@ -20,7 +20,7 @@ const App = observer(() => {
   });
 
   return (
-    <div>
+    <BrowserRouter>
       <Switch>
         <Route path="/login" component={Login} />
         <PrivateRoute path="/admin" component={Admin} />
@@ -28,7 +28,7 @@ const App = observer(() => {
           <NoPage />
         </Route>
       </Switch>
-    </div>
+    </BrowserRouter>
   );
 });
 
