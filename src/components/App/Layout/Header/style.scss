@@ -9,18 +9,27 @@
   &__img {
     width: 80px;
     height: 60px;
+
+    @media (max-width: 960px) {
+      width: 40px;
+      height: 30px;
+    }
   }
 
   &__button-logout {
     font-size: 16px;
     font-weight: bold;
-    height: 18px;
+    height: 20px;
     color: #ed4455;
     font-family: "Nunito", sans-serif;
     font-size: 18px;
 
     &:hover {
       cursor: pointer;
+    }
+
+    @media (max-width: 960px) {
+      font-size: 14px;
     }
   }
 }
@@ -41,6 +50,15 @@
       text-decoration: none;
       font-family: "Nunito", sans-serif;
       font-size: 18px;
+
+      @media (max-width: 960px) {
+        font-size: 14px;
+      }
     }
+  }
+
+  @media (max-width: 960px) {
+    width: 60%;
+    padding-left: 0;
   }
 }

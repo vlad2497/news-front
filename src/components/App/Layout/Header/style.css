@@ -10,16 +10,27 @@
   width: 80px;
   height: 60px;
 }
+@media (max-width: 960px) {
+  .menu__img {
+    width: 40px;
+    height: 30px;
+  }
+}
 .menu__button-logout {
   font-size: 16px;
   font-weight: bold;
-  height: 18px;
+  height: 20px;
   color: #ed4455;
   font-family: "Nunito", sans-serif;
   font-size: 18px;
 }
 .menu__button-logout:hover {
   cursor: pointer;
+}
+@media (max-width: 960px) {
+  .menu__button-logout {
+    font-size: 14px;
+  }
 }
 .nav {
   display: flex;
@@ -37,4 +48,15 @@
   text-decoration: none;
   font-family: "Nunito", sans-serif;
   font-size: 18px;
+}
+@media (max-width: 960px) {
+  .nav__link a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 960px) {
+  .nav {
+    width: 60%;
+    padding-left: 0;
+  }
 }

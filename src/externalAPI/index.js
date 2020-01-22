@@ -2,7 +2,7 @@ import axios from "axios";
 
 const apiKey = "0783ea48b34e4d558c3301f7857cd57b";
 
-axios.defaults.baseURL = "http://192.168.1.4";
+axios.defaults.baseURL = "https://news-back.herokuapp.com";
 
 export const getUser = () => {
   return axios.get("/api/user").then(response => response);
