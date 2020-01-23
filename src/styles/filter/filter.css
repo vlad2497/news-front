@@ -3,13 +3,58 @@
   justify-content: space-between;
   padding: 20px;
 }
+@media (max-width: 960px) {
+  .filter-wrapper {
+    flex-direction: column;
+  }
+}
 .search {
   display: flex;
 }
-.selects {
-  display: flex;
+.search__input {
+  border: 1px solid #c72e53 !important;
+  color: #c72e53;
+  font-family: "Nunito", sans-serif;
+  width: 400px;
+  height: 42px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+@media (max-width: 960px) {
+  .search__input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.search__input::placeholder {
+  opacity: 1;
 }
 .select {
+  display: flex;
+}
+.select-wrapper {
   margin: 0 20px;
   width: 200px;
+}
+@media (max-width: 960px) {
+  .select-wrapper {
+    margin: 0;
+    padding-right: 12px;
+    width: 120px;
+  }
+}
+.select__item {
+  border: 1px solid #c72e53 !important;
+  color: #c72e53;
+  font-family: "Nunito", sans-serif;
+}
+.select__item input::placeholder {
+  color: #c72e53;
+  font-family: "Nunito", sans-serif;
+  opacity: 1;
+}
+@media (max-width: 960px) {
+  .select {
+    justify-content: space-between;
+  }
 }

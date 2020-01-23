@@ -12,8 +12,8 @@
   display: flex;
 
   &__input {
-    border: 1px solid #8aff !important;
-    color: #8aff;
+    border: 1px solid #c72e53 !important;
+    color: #c72e53;
     font-family: "Nunito", sans-serif;
     width: 400px;
     height: 42px;
@@ -46,12 +46,12 @@
   }
 
   &__item {
-    border: 1px solid #8aff !important;
-    color: #8aff;
+    border: 1px solid #c72e53 !important;
+    color: #c72e53;
     font-family: "Nunito", sans-serif;
 
     input::placeholder {
-      color: #8aff;
+      color: #c72e53;
       font-family: "Nunito", sans-serif;
       opacity: 1;
     }
