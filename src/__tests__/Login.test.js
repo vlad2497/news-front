@@ -13,11 +13,14 @@ describe("Login component", () => {
   });
 
   it("renders Login links", () => {
-    let footer = mount(
+    let login = mount(
       <MemoryRouter>
         <Login />
       </MemoryRouter>
     );
+
+    login.find("input[type='login']").at(0);
+    //.simulate("change", { target: { value: "testTest" } });
 
     /*expect(footer.find("li")).toHaveLength(3);*/
   });

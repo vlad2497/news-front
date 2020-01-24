@@ -1,10 +1,10 @@
 import { createContext } from "react";
 import AuthStore from "./AuthStore";
-import HomeStore from "./HomeStore";
+//import HomeStore from "./HomeStore";
 
 const store = createContext({
-  authStore: AuthStore,
-  homeStore: HomeStore
+  authStore: AuthStore
+  //homeStore: HomeStore
 });
 
 export default store;
