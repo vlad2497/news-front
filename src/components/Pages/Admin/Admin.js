@@ -1,6 +1,6 @@
 import React from "react";
-import Apps from "./../Apps";
-import Music from "./../Music";
+import Business from "./../Business";
+import Science from "./../Science";
 import Home from "./../Home";
 import Header from "./../../App/Layout/Header";
 import Footer from "./../../App/Layout/Footer";
@@ -11,8 +11,8 @@ const Admin = ({ match }) => {
     <div>
       <Header />
       <Route path={`${match.path}/home`} component={Home} />
-      <Route path={`${match.path}/apps`} component={Apps} />
-      <Route path={`${match.path}/music`} component={Music} />
+      <Route path={`${match.path}/business`} component={Business} />
+      <Route path={`${match.path}/science`} component={Science} />
       <Footer />
     </div>
   );

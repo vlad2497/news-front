@@ -7,13 +7,13 @@ const Footer = () => {
     <div className="footer">
       <ul className="footer-links">
         <li>
-          <Link to="/admin/home">Home</Link>
+          <Link to="/admin/home">Главная</Link>
         </li>
         <li>
-          <Link to="/admin/apps">Apps</Link>
+          <Link to="/admin/business">Политика</Link>
         </li>
         <li>
-          <Link to="/admin/music">Music</Link>
+          <Link to="/admin/science">Наука</Link>
         </li>
       </ul>
     </div>

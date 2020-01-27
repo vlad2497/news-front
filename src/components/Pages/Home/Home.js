@@ -6,13 +6,17 @@ import Loader from "react-loader-spinner";
 import Select from "react-dropdown-select";
 
 const optionsCountries = [
-  { label: "Russia", value: "ru" },
-  { label: "England", value: "gb" }
+  { label: "Россия", value: "ru" },
+  { label: "Англия", value: "gb" }
 ];
 const optionsCategories = [
-  { label: "General", value: "general" },
-  { label: "Business", value: "business" },
-  { label: "Technology", value: "technology" }
+  { label: "Все", value: "general" },
+  { label: "Бизнес", value: "business" },
+  { label: "Технологии", value: "technology" },
+  { label: "Здоровье", value: "health" },
+  { label: "Наука", value: "science" },
+  { label: "Спорт", value: "sports" },
+  { label: "Развлечения", value: "entertainment" }
 ];
 
 const Home = () => {
@@ -21,7 +25,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [totalPages, setTotalPages] = useState(true);
   const [category, setCategory] = useState("");
-  const [country, setCountry] = useState("gb");
+  const [country, setCountry] = useState("ru");
   const [search, setSearch] = useState("");
   let searchTimer;
 
@@ -57,7 +61,7 @@ const Home = () => {
           <input
             className="search__input"
             type="search"
-            placeholder="Enter keyword"
+            placeholder="Поиск..."
             onChange={event => searchChange(event)}
           />
         </div>
@@ -68,7 +72,7 @@ const Home = () => {
               onChange={values => setCountryValues(values)}
               color="#8aff"
               searchable={false}
-              placeholder="Country"
+              placeholder="Страна"
               className="select__item"
             />
           </div>
@@ -78,7 +82,7 @@ const Home = () => {
               onChange={values => setCategoryValues(values)}
               color="#8aff"
               searchable={false}
-              placeholder="Category"
+              placeholder="Категория"
               className="select__item"
             />
           </div>

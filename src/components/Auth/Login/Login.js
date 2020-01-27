@@ -21,7 +21,6 @@ const Login = observer(() => {
 
   const onSubmit = values => {
     //authStore.changeLoading(true);
-    setError("Данные введены не верно!");
     authStore
       .loginRequest(values)
       .then(() => {

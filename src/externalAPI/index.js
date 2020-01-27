@@ -24,7 +24,7 @@ export const refresh = () => {
 export const articles = (
   page = 1,
   category = "",
-  country = "gb",
+  country = "ru",
   search = ""
 ) => {
   return axios

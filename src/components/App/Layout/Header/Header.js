@@ -19,17 +19,17 @@ const Header = observer(({ match }) => {
       <img className="menu__img" src="/logo.png" alt="logo" />
       <ul className="nav">
         <li className="nav__link">
-          <Link to="/admin/home">Home</Link>
+          <Link to="/admin/home">Главная</Link>
         </li>
         <li className="nav__link">
-          <Link to="/admin/apps">Apps</Link>
+          <Link to="/admin/business">Политика</Link>
         </li>
         <li className="nav__link">
-          <Link to="/admin/music">Music</Link>
+          <Link to="/admin/science">Наука</Link>
         </li>
       </ul>
       <div className="menu__button-logout" onClick={logout}>
-        Logout
+        Выйти
       </div>
     </div>
   );
