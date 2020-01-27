@@ -1,4 +1,5 @@
-.login-form {
-  border: 1px solid #40e1d1;
-  border-radius: 6px;
+.form__error {
+  font-family: "Nunito", sans-serif;
+  color: brown;
+  font-size: 14px;
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useHistory, Redirect } from "react-router-dom";
 import { Form, Field } from "react-final-form";
 import { observer } from "mobx-react";
@@ -17,17 +17,20 @@ import Loader from "react-loader-spinner";
 const Login = observer(() => {
   const { authStore } = useContext(store);
   const history = useHistory();
+  const [error, setError] = useState("");
 
   const onSubmit = values => {
-    authStore.changeLoading(true);
+    //authStore.changeLoading(true);
+    setError("Данные введены не верно!");
     authStore
       .loginRequest(values)
       .then(() => {
         history.push("/admin/home");
       })
       .catch(() => {
-        authStore.changeLoading(false);
-        ToastsStore.error(messages.login.errors.incorrect);
+        //authStore.changeLoading(false);
+        setError("Данные введены не верно!");
+        //ToastsStore.error(messages.login.errors.incorrect);
       });
   };
 
@@ -67,6 +70,7 @@ const Login = observer(() => {
               <button className="form__submit" type="submit">
                 Войти
               </button>
+              <p className="form__error">{error}</p>
             </form>
           )}
         />
