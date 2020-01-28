@@ -20,14 +20,14 @@ const Login = observer(() => {
   const [error, setError] = useState("");
 
   const onSubmit = values => {
-    //authStore.changeLoading(true);
+    authStore.changeLoading(true);
     authStore
       .loginRequest(values)
       .then(() => {
         history.push("/admin/home");
       })
       .catch(() => {
-        //authStore.changeLoading(false);
+        authStore.changeLoading(false);
         setError("Данные введены не верно!");
         //ToastsStore.error(messages.login.errors.incorrect);
       });
