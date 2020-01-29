@@ -42,47 +42,50 @@ const Login = observer(() => {
     return errors;
   };
 
-  return !Object.keys(authStore.user).length ? (
-    authStore.loading ? (
-      <div className="form-wrapper">
-        <Loader
-          type="Puff"
-          color="#40e1d1"
-          height={100}
-          width={100}
-          timeout={3000}
-        />
-      </div>
-    ) : (
-      <div className="form-wrapper">
-        <Form
-          onSubmit={onSubmit}
-          validate={validate}
-          render={({ handleSubmit }) => (
-            <form onSubmit={handleSubmit} className="form login-form">
-              <img className="form__img" src="/logo.png" alt="logo" />
-              <h2 className="form__title">Вход</h2>
-
-              <Field name="email" component={LoginInput} />
-              <Field name="password" component={PasswordInput} />
-
-              <button className="form__submit" type="submit">
-                Войти
-              </button>
-              <p className="form__error">{error}</p>
-            </form>
-          )}
-        />
-        <ToastsContainer
-          store={ToastsStore}
-          position={ToastsContainerPosition.TOP_CENTER}
-          color="white"
-        />
-      </div>
-    )
-  ) : (
-    <Redirect to="/admin/home" />
-  );
+  if(!Object.keys(authStore.user).length){
+    if(authStore.loading){
+      return (
+        <div className="form-wrapper">
+          <Loader
+            type="Puff"
+            color="#40e1d1"
+            height={100}
+            width={100}
+          />
+        </div>
+      );
+    }else{
+      return (
+        <div className="form-wrapper">
+          <Form
+            onSubmit={onSubmit}
+            validate={validate}
+            render={({ handleSubmit }) => (
+              <form onSubmit={handleSubmit} className="form login-form">
+                <img className="form__img" src="/logo.png" alt="logo" />
+                <h2 className="form__title">Вход</h2>
+  
+                <Field name="email" component={LoginInput} />
+                <Field name="password" component={PasswordInput} />
+  
+                <button className="form__submit" type="submit">
+                  Войти
+                </button>
+                <p className="form__error">{error}</p>
+              </form>
+            )}
+          />
+          <ToastsContainer
+            store={ToastsStore}
+            position={ToastsContainerPosition.TOP_CENTER}
+            color="white"
+          />
+        </div>
+      )
+    }
+  }else{
+    return <Redirect to="/admin/home" />
+  }
 });
 
 export default Login;
